@@ -327,7 +327,7 @@ In our data page, you will find
 * Documentation of the datasets 
 * Coverage maps per harmonised item and survey 
 
-Please take a moment to have a quick look at this page here:  [https://infra4nextgen.com/harmonisationgateway/data.html] 
+Please take a moment to have a quick look at [this page](https://infra4nextgen.com/harmonisationgateway/data.html)
 
 **Always Consult the Documentation  **
 
