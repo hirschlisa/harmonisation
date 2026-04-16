@@ -369,7 +369,7 @@ If you want to run the code locally, you need two free software programs:  Insta
 
 You have two ways to interact with the exercises: 
 * Copy & Paste: You can click the Copy icon on the right-hand side of any code chunk in this course to paste it directly into your RStudio script. 
-* Download the Full Script: If you prefer to have the complete code for this entire section, you can [Download the R Script Here](Section3_WorkingwithHarmonisedData.Rmd). 
+* Download the Full Script: If you prefer to have the complete code for this entire section, you can [Download the R Script Here](Section3_WorkingwithHarmonisedDatasets.Rmd). 
 
 
 ** 3.2.1 Setup: Install and Load Packages **
