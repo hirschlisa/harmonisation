@@ -1122,3 +1122,6 @@ Congratulations! You completed the course “Creating and Working with Ex-post H
 In this course, you learned about the NextGen Harmonised Data Gateway and its three components: the Variable Database, Harmonisation Toolbox, and Harmonised Datasets. You explored different harmonisation strategies and their consequences, assessed the quality of harmonised measures, and gained hands-on experience working with harmonised survey data in R. You now know how to identify variables as candidates for harmonisation, apply appropriate harmonisation strategies, and create your own harmonised datasets. 
 
 We are continually updating the course and incorporating feedback, so please do not hesitate to contact us via email or during our office hours. If you are interested in live events hosted by the Infra4NextGen project, please visit the [I4NG events site](https://infra4nextgen.com/i4ng-events/forthcoming-events/) and come join us at one of our events - we host webinars, workshops, and data[](https://liascript.github.io/LiveEditor/liascript/index.html?#33)thons regularly! 
+
+---
+![Infra4NextGen Logo](image/Infra4NextGen_logo_resized.jpg  "https://infra4nextgen.com/") ![CESSDA Logo](image/cessda_logo.png  "https://www.cessda.eu/") 
