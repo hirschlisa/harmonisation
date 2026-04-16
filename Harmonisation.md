@@ -160,7 +160,9 @@ In this section, you will learn how survey data from different sources can be ma
 
 Before applying any method, you must assess similarity. Not all variables can be harmonised; if the underlying concepts are too different, the data cannot be made comparable. 
 
-Watch the video to learn more: [insert Video here]  
+Watch the video to learn more: 
+
+!?[⏯](video/video1-similarity.mp4)
 
 <!-- style="background-color: #E72E6B; color: white"--> 
 > **__Quiz I__**
@@ -199,7 +201,9 @@ Solution: When evaluating similarity for harmonisation purposes, you need to con
 
 ## 2.2 Harmonisation strategies 
 
-If variables are sufficiently similar, different strategies can be applied to harmonise response scales. The choice of strategy depends on certain characteristics that are explained in the video below: [insert Video here]  
+If variables are sufficiently similar, different strategies can be applied to harmonise response scales. The choice of strategy depends on certain characteristics that are explained in the video below: 
+
+!?[⏯](video/video2-harmonisation-strategies.mp4)
 
 <!-- style="background-color: #E72E6B; color: white"--> 
 > **__Quiz III__**
