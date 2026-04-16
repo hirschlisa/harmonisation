@@ -417,7 +417,8 @@ Now, let us download your first dataset. Remember the ZA numbers from the datase
 # Download the SPSS version of the Equal dataset from GESIS 
 I4NG_equal_file <- gesis_data("ZA9072", select = "\\") 
 
-#When you run gesis_data(), R will ask you to specify the purpose of your data use: 
+# When you run gesis_data(), R will ask you to specify the purpose of your data
+# use: 
 #ℹ Please specify a purpose for the use of the research data. 
  
 1: for final thesis of the study programme (e.g. Bachelor/Master thesis) 
@@ -430,16 +431,20 @@ I4NG_equal_file <- gesis_data("ZA9072", select = "\\")
    
 #Type the number that best matches your purpose and press Enter. 
 
-# user_na = TRUE tells R to treat SPSS missing value codes (-9, -99, -999) as NA.  
+# user_na = TRUE tells R to treat SPSS missing value codes (-9, -99, -999)
+# as NA.  
 
-# This means  !is.na() will automatically exclude all three types later in your analysis. 
+# This means  !is.na() will automatically exclude all three types later in
+# your analysis. 
 I4NG_equal_data <- read_sav(I4NG_equal_file, user_na = TRUE) 
  
 # How big is it? 
 
-# It is always good practice to check the size of your dataset after loading it. 
+# It is always good practice to check the size of your dataset after loading
+# it. 
 
- # The first number is the number of rows (respondents), and the second is the number of columns (variables).  
+# The first number is the number of rows (respondents), and the second is the
+# number of columns (variables).  
 dim(I4NG_equal_data)
 ```
 
@@ -820,7 +825,8 @@ I4NG_digital_data <-
 
 #  Replace s_your_variable and d_your_variable with your chosen variables 
 
-#  Consult the documentation before starting: https://infra4nextgen.com/harmonisationgateway/data.html 
+#  Consult the documentation before starting:
+# https://infra4nextgen.com/harmonisationgateway/data.html 
 
  
 
@@ -842,13 +848,14 @@ I4NG_digital_data <-
 
 #  --- Step 4: Find respondents who answered BOTH variables --- 
 
-#  Hint: use inner_join() on caseID_I4NG, then filter out NAs on both variables 
+#  Hint: use inner_join() on caseID_I4NG, then filter out NAs on both
+# variables 
 
  
 
 #  --- Step 5: Append your Strong variable to the Digital dataset --- 
 
-#  Hint: use left_join() on caseID_I4NG, the same way as in Section 3.9 
+#  Hint: use left_join() on caseID_I4NG, the same way as in Section 3.2.9 
 
 ```
 
