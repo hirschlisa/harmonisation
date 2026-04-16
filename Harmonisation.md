@@ -78,7 +78,7 @@ This course comes with individual support in different formats.
 * Wednesday, 28.10.2026, 11:00 – 11:30 CET    
 * Tuesday, 01.12.2026, 11:00 – 11:30 CET   
 
-If you have any questions, you can always contact the I4NG Harmonisation team at GESIS via email XXXX LINK. 
+If you have any questions, you can always (contact the I4NG Harmonisation team at GESIS via email)[mailto:harmonisation.i4ng@gesis.org]. 
 
 Ready to dive into the world of survey data harmonization? 
 
