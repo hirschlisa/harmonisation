@@ -72,8 +72,9 @@ This course comes with individual support in different formats.
 
 1. Individual office hours: Two sessions, each with additional materials, input, and Q&A with the Infra4NextGen Harmonisation team: 
 * Session 1: 09.06.2026, 11:00 – 12:30 CEST Kick-off & Meet the Harmony Team, (Harmony is a unique NLP-based tool to accelerate harmonisation processes.). Register via XXX
-* Session 2: 29.09.2026, 11:00 – 12:30 CEST Evaluation of Test Equating & Linking Methods for Harmonisation. Register via XXX
-2. Public Consultation Slots:  We offer three open Q&A sessions for questions and follow-ups.  Register via XXX 
+* Session 2: 29.09.2026, 11:00 – 12:30 CEST Evaluation of Test Equating & Linking Methods for Harmonisation. 
+* Register (here)[https://infra4nextgen.com/i4ng-events/forthcoming-events/]
+2. Public Consultation Slots:  We offer three open Q&A sessions for questions and follow-ups.  Please send us an email  to receive the link.  
 * Tuesday, 30.06.2026, 11:00 – 11:30 CEST   
 * Wednesday, 28.10.2026, 11:00 – 11:30 CET    
 * Tuesday, 01.12.2026, 11:00 – 11:30 CET   
@@ -295,13 +296,13 @@ Roth, M. & Singh, R. K. (2024). Questionlink: Harmonizing single item survey que
 
 De Jonge, T., Veenhoven, R. & Kalmijn, W. (2017). Diversity in Survey Questions on the Same Topic. Springer International Publishing AG. 
 
-Davidov, E., Meuleman, B., Cieciuch, J., Schmidt, P. & Billiet, J. (2014). Measurement Equivalence in Cross-National Research. Annual Review of Sociology, Volume 40, pp. 55-75. 
+Davidov, E., Meuleman, B., Cieciuch, J., Schmidt, P. & Billiet, J. (2014). Measurement Equivalence in Cross-National Research. Annual Review of Sociology, Volume 40, pp. 55-75. https://doi.org/10.1146/annurev-soc-071913-043137
 
-Granda, P., Wolf, C., & Hadorn, R. (2010). Harmonizing survey data. Survey methods in multinational, multiregional, and multicultural contexts, 315-332. 
+Granda, P., Wolf, C., & Hadorn, R. (2010). Harmonizing survey data. Survey methods in multinational, multiregional, and multicultural contexts, 315-332.  https://doi.org/10.1002/9780470609927.ch17
 
-Roth, M. & Singh, R. K. (2025). One harmonization fits all? – Impact of missing population invariance on harmonisation error when harmonizing social science survey questions with equating. International Journal of Social Research Methodology. 
+Roth, M. & Singh, R. K. (2025). One harmonization fits all? – Impact of missing population invariance on harmonisation error when harmonizing social science survey questions with equating. International Journal of Social Research Methodology.  https://doi.org/10.1080/13645579.2025.2481112
 
-Michaud, A., Bosch, O. J. & Sauger, N. (2023). Can Survey Scales Affect What People Report as A Fair Income? Evidence From the Cross-National Probability-Based Online Panel CRONOS. Social Justice Research, Volume 36, pp. 225-262. 
+Michaud, A., Bosch, O. J. & Sauger, N. (2023). Can Survey Scales Affect What People Report as A Fair Income? Evidence From the Cross-National Probability-Based Online Panel CRONOS. Social Justice Research, Volume 36, pp. 225-262. https://doi.org/10.1007/s11211-023-00410-0
 
 # Section 3: Working with Harmonised Datasets
 
@@ -331,7 +332,7 @@ In our data page, you will find
 * Documentation of the datasets 
 * Coverage maps per harmonised item and survey 
 
-Please take a moment to have a quick look at [this page](https://infra4nextgen.com/harmonisationgateway/data.html)
+Please take a moment to have a quick look at [our data page](https://infra4nextgen.com/harmonisationgateway/data.html) in another tab, then come back to this course to continue your learning.  
 
 **Always Consult the Documentation  **
 
@@ -363,7 +364,7 @@ This section will show you how to access and work with I4NG harmonised datasets 
 **Setting Up Your Environment**
 To access the datasets, you need a free GESIS account. Create on at the [GESIS log in page](https://login.gesis.org).  
 
-If you want to run the code locally, you need two free software programs:  Install [R](https://www.r-project.org/) and [RStudio](https://www.rstudio.com/) 
+If you want to run the code locally, you need two free software programs:  Install [R](https://www.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/) 
 
 **New to R?** If you need further guidance, we suggest [R for Non-Programmers](https://r4np.com/) that also includes a detailed section on how to set up R and R studio.
 
@@ -527,7 +528,7 @@ I4NG_equal_data %>%
 
 We will use e_wr_govn (Government Responsibility in Income Redistribution) as our example variable throughout this section. 
 
-[Here](https://infra4nextgen.com/harmonisationgateway/documentation_equal.html#government-responsibility-in-income-redistribution---e_wr_govn) is where you can see  the documentation for this variable, including   question text, response scales, harmonisation decisions, and more. 
+Please open the (item`s page)[https://infra4nextgen.com/harmonisationgateway/documentation_equal.html#government-responsibility-in-income-redistribution---e_wr_govn] in another tab, where you can read the documentation for this variable, including  question text, response scales, harmonisation decisions, and more.   We highly suggest keeping the documentation open while working with the datasets. 
 
 **Missing Value Codes **
 
@@ -543,8 +544,9 @@ Because we loaded the data with user_na = TRUE, these are already stored as tagg
 Start with the overall distribution across all surveys and countries combined. 
 ``` r
 # Check raw values first  including missing codes 
-I4NG_equal_data %>%  
-count(e_wr_govn) 
+I4NG_equal_data %>% 
+group_by(e_wr_govn) %>% 
+summarise(n = n())  
 ```
   
 What do you see here? The variable has both valid responses (1–5 scale) and missing value codes: -9, -99, -999. Also note the values 2.333… and 3.666…  these are harmonised intermediate values produced by the linear stretch method when a source scale was mapped onto the 1–5 target scale. This is a direct result of the harmonisation.  
@@ -584,33 +586,37 @@ I4NG_equal_data %>%
    ) 
 
 # Which surveys have valid data for e_wr_govn, and how many respondents? 
-I4NG_equal_data %>% 
-   filter(!is.na(e_wr_govn)) %>% 
-   count(survey_year_title) %>% 
-   arrange(desc(n)) 
+I4NG_equal_data %>%  
+  filter(!is.na(e_wr_govn)) %>%  
+  group_by(survey_year_title) %>% 
+  summarise(n = n()) %>% 
+  arrange(desc(n))
 ```
 
 **Frequencies Split by Survey **
 ```r
-I4NG_equal_data %>% 
-   filter(!is.na(e_wr_govn)) %>% 
-   group_by(survey_year_title) %>% 
-   count(e_wr_govn) %>% 
-   mutate(pct = round(n / sum(n) * 100, 1)) %>% 
-   arrange(survey_year_title, e_wr_govn) 
-
-Country Coverage for This Variable 
-
+I4NG_equal_data %>%  
+  filter(!is.na(e_wr_govn)) %>%  
+  group_by(survey_year_title, e_wr_govn) %>%  
+  summarise(n = n(), .groups = "drop") %>%  
+  group_by(survey_year_title) %>% 
+   mutate(pct = round(n / sum(n) * 100, 1)) %>%  
+  arrange(survey_year_title, e_wr_govn)  
+```
+** Country Coverage for This Variable **
+```r
 # How many unique countries have valid data for e_wr_govn? 
 I4NG_equal_data %>% 
    filter(!is.na(e_wr_govn)) %>% 
    summarise(n_countries = n_distinct(country_I4NG)) 
  
 # N per country 
-I4NG_equal_data %>% 
-   filter(!is.na(e_wr_govn)) %>% 
-   count(country_I4NG) %>% 
-   arrange(desc(n)) 
+I4NG_equal_data %>%  
+  filter(!is.na(e_wr_govn)) %>%  
+  group_by(country_I4NG) %>%  
+  summarise(n = n()) %>%  
+  arrange(desc(n)) 
+
  
 # How many unique countries per source survey? 
 I4NG_equal_data %>% 
@@ -621,17 +627,18 @@ I4NG_equal_data %>%
 ```
 **Country × Year Coverage Matrix **
 
-```r
 This shows which countries are available in which years. 
 
-I4NG_equal_data %>% 
-   filter(!is.na(e_wr_govn)) %>% 
-   count(country_I4NG, year) %>% 
-   tidyr::pivot_wider( 
-     names_from  = year, 
-     values_from = n, 
-     values_fill = 0 
-   ) 
+```r
+I4NG_equal_data %>%  
+  filter(!is.na(e_wr_govn)) %>%  
+  group_by(country_I4NG, year) %>%  
+  summarise(n = n(), .groups = "drop") %>%  
+  tidyr::pivot_wider(  
+    names_from  = year,  
+    values_from = n,  
+    values_fill = 0  
+  ) 
 ```
 
 **What to look for in these outputs **
@@ -655,11 +662,12 @@ Now, let us find which single survey has the most respondents for this variable.
 
 ```r
 # --- The single best survey --- 
-I4NG_green_data %>% 
-   filter(!is.na(g_ep_clai)) %>% 
-   count(survey_year_title) %>% 
-   arrange(desc(n)) %>% 
-   head(1) 
+I4NG_green_data %>%  
+  filter(!is.na(g_ep_clai)) %>%  
+  group_by(survey_year_title) %>%  
+  summarise(n = n()) %>%  
+  arrange(desc(n)) %>%  
+  head(1) 
  
 # --- Countries per survey --- 
 I4NG_green_data %>% 
@@ -696,19 +704,21 @@ Explore a Variable from the Green Dataset
 
 Before merging, let us explore g_ep_clai the same way we did for e_wr_govn. 
 ```r
-# Overall frequencies for g_ep_clai  
-I4NG_green_data %>% 
+# Overall frequencies for g_ep_clai   
+I4NG_green_data %>%  
    filter(!is.na(g_ep_clai)) %>% 
-   count(g_ep_clai) %>% 
-   mutate(pct = round(n / sum(n) * 100, 1)) %>% 
+   group_by(g_ep_clai) %>%  
+  summarise(n = n()) %>% 
+    mutate(pct = round(n / sum(n) * 100, 1)) %>%  
    arrange(g_ep_clai) 
- 
-# Frequencies split by survey 
-I4NG_green_data %>% 
-   filter(!is.na(g_ep_clai)) %>% 
-   group_by(survey_year_title) %>% 
-   count(g_ep_clai) %>% 
-   mutate(pct = round(n / sum(n) * 100, 1)) %>% 
+
+# Frequencies split by survey  
+I4NG_green_data %>%  
+   filter(!is.na(g_ep_clai)) %>%  
+   group_by(survey_year_title, g_ep_clai) %>%  
+  summarise(n = n(), .groups = "drop") %>%  
+  group_by(survey_year_title) %>% 
+    mutate(pct = round(n / sum(n) * 100, 1)) %>%  
    arrange(survey_year_title, g_ep_clai) 
 ```
 **Who Answered Both Items g_ep_clai and e_wr_govn? **
@@ -786,12 +796,12 @@ Try the following on your own. Use the **Strong**  (ZA9071) and the **Digital** 
 5. Which specific surveys (e.g., ESS 2016, Eurobarometer 2020) contributed to this overlap? 
 6. Append your chosen Strong variable to the Digital dataset so you can analyse them together in one data frame 
 
-```
+```r
 # Your code here:  
 
-#--- Step 1: Download both datasets --- 
+# --- Step 1: Download both datasets --- 
 
-I4NG_strong_file <- gesis_data("ZA9071", select = "\.sav")  
+  I4NG_strong_file <- gesis_data("ZA9071", select = "\.sav")  
 
 I4NG_strong_data <- read_sav(I4NG_strong_file, user_na = TRUE) 
 
@@ -799,37 +809,47 @@ I4NG_digital_file <-
 
 I4NG_digital_data <- 
 
-#--- Step 2: Identify substantive harmonised variables --- 
+ 
 
-#Hint: Strong variables start with "s_", Digital with "d_" 
+# --- Step 2: Identify substantive harmonised variables --- 
 
+#  Hint: Strong variables start with "s_", Digital with "d_" 
 
-#--- Step 3: Pick one variable from each dataset and explore it --- 
+ 
 
-#Replace s_your_variable and d_your_variable with your chosen variables 
+#  --- Step 3: Pick one variable from each dataset and explore it --- 
 
-#Consult the documentation before starting: https://infra4nextgen.com/harmonisationgateway/data.html 
+#  Replace s_your_variable and d_your_variable with your chosen variables 
 
+#  Consult the documentation before starting: https://infra4nextgen.com/harmonisationgateway/data.html 
 
-#Overall frequency 
+ 
 
+#  Overall frequency 
 
-#Source survey coverage 
+ 
 
+#  Source survey coverage 
 
-#Country coverage 
+ 
 
+#  Country coverage 
 
-#Year coverage 
+ 
 
+#  Year coverage 
 
-#--- Step 4: Find respondents who answered BOTH variables --- 
+ 
 
-#Hint: use inner_join() on caseID_I4NG, then filter out NAs on both variables  
+#  --- Step 4: Find respondents who answered BOTH variables --- 
 
-#--- Step 5: Append your Strong variable to the Digital dataset --- 
+#  Hint: use inner_join() on caseID_I4NG, then filter out NAs on both variables 
 
-Hint: use left_join() on caseID_I4NG, the same way as in Section 3.9 
+ 
+
+#  --- Step 5: Append your Strong variable to the Digital dataset --- 
+
+#  Hint: use left_join() on caseID_I4NG, the same way as in Section 3.9 
 
 ```
 
@@ -844,7 +864,7 @@ Hint: use left_join() on caseID_I4NG, the same way as in Section 3.9
 > * Understand which source surveys contribute to each variable 
 > * Use caseID_I4NG to merge data across policy pillars 
 > 
->  Ready to move on? Go to [Section 4](#XX) to learn how to assess the quality of harmonised measures and understand the consequences of choosing certain harmonisation strategies for the data. 
+>  Ready to move on? Go to [Section 4](#15) to learn how to assess the quality of harmonised measures and understand the consequences of choosing certain harmonisation strategies for the data. 
 
 
 # Section 4: Assessing the Quality of Harmonised Measures
@@ -928,7 +948,9 @@ Solution: Aggregation Error occurs when detailed data (e.g., specific educationa
 <!-- style="background-color: #6EC7D9;"--> 
 > Summary
 >
->Survey data harmonisation is always a trade-off between accuracy and coverage. All harmonisation steps should be carried out and documented with great care. What you should keep in mind during quality checks, though, is that the accepted level of data quality is closely related to the intended use of the target variable! If you want to make broad statements about as many country trends as possible, you can probably tolerate a coarser harmonisation than if you are interested in the differences in precise gradations. 
+>Survey data harmonisation is always a trade-off between accuracy and coverage. All harmonisation steps should be carried out and documented with great care. What you should keep in mind during quality checks, though, is that the accepted level of data quality is closely related to the intended use of the target variable! If you want to make broad statements about as many country trends as possible, you can probably tolerate a coarser harmonisation than if you are interested in the differences in precise gradations.
+> To conclude our discussion on quality, we invite you to a specialised technical session. Dr Rabia Karatoprak Ersen will give the talk as part of our [Office Hours](#2) to help researchers navigate the advanced statistical rigour required to minimise errors in the harmonisation process.  Please have a look at the office hours section of this course for details and registration. 
+> Go to [Section 5](#20) to learn more about how to create your own dataset!
 
 ## 4.4 Bibliography and further reading
 
@@ -1002,7 +1024,7 @@ Go to the [Harmonisation Toolbox](https://infra4nextgen.com/harmonisationgateway
 
 As you look at the “Climate Change Worries” guideline, notice how the workflow is modular: 1. **The Setup**: You define your directory and load libraries. **The Codebook**: You tell R which variables to “pull” from your raw data. 3. **The Crosswalk Table (CWT)**: This is the heart of the tool. Even if you decide on a different survey item, you use the function for this table to map your source values to your target scale. 4. **The Transformation**: The script uses the Linear Stretch formula. This formula works for any numeric scale, whether it’s 1–4, 1–7, or 0–10. 
 
-[Screenshot of the CWT here] 
+![CWT](image/CWT.png)
 
 **Step 3: Try it Yourself **
 
