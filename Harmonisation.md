@@ -974,9 +974,9 @@ Huang, C. A. (2024). A Unified Statistical And Computational Framework For Ex-Po
 
 Jović, M., Haeri, M.A., Whitehouse, A. & van den Berg, S.M. (2024). Harmonizing the CBCL and SDQ ADHD scores by using linear equating, kernel equating, item response theory and machine learning methods. Frontiers in Psychology, Volume 15. 
 
-Slomczynski, K.M., Tomescu-Dubrow, I. & Wysmułek, I. (2021). Survey Data Quality in Analyzing Harmonized Indicators of Protest Behavior: A Survey Data Recycling Approach. American Behavioral Scientist, Volume 66, pp. 412 - 433. 
+Slomczynski, K.M., Tomescu-Dubrow, I. & Wysmułek, I. (2021). Survey Data Quality in Analyzing Harmonized Indicators of Protest Behavior: A Survey Data Recycling Approach. American Behavioral Scientist, Volume 66, pp. 412 - 433. https://doi.org/10.1177/00027642211021623
 
-Tu, Y., Li, O., Wang, J., Shen, H., Powałko, P., Tomescu-Dubrow, I., Slomczynski, K.M., Blanas, S. & Jenkins, J.C. (2022). SDRQuerier: A Visual Querying Framework for Cross-National Survey Data Recycling. IEEE Transactions on Visualization and Computer Graphics, Volume 29, pp. 2862-2874. 
+Tu, Y., Li, O., Wang, J., Shen, H., Powałko, P., Tomescu-Dubrow, I., Slomczynski, K.M., Blanas, S. & Jenkins, J.C. (2022). SDRQuerier: A Visual Querying Framework for Cross-National Survey Data Recycling. IEEE Transactions on Visualization and Computer Graphics, Volume 29, pp. 2862-2874. https://doi.ieeecomputersociety.org/10.1109/TVCG.2023.3261944 
 
 # Section 5: Create Your Own Dataset 
 
