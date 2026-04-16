@@ -35,6 +35,8 @@ If you want to learn how to work confidently with existing harmonised survey dat
 <!-- style="background-color: #6EC7D9;"--> 
 > It will take about XX minutes to complete this module. 
 
+----
+![EU Logo](image/EU_logo.jpg "Funded by the European Union") 
 
 ## Objectives and Learning Outcomes
 This course aims to: 
@@ -84,9 +86,6 @@ If you have any questions, you can always [contact the I4NG Harmonisation team a
 Ready to dive into the world of survey data harmonization? 
 
 Go ahead to [Section 1 on the NextGen Harmonised Data Gateway](#3)!
-
-----
-![EU Logo](image/EU_logo.jpg "Funded by the European Union") 
 
 # Section 1: The NextGen Harmonised Data Gateway
 
