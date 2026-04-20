@@ -73,7 +73,7 @@ By the end of the course, you will be able to:
 This course comes with individual support in different formats. 
 
 1. Individual office hours: Two sessions, each with additional materials, input, and Q&A with the Infra4NextGen Harmonisation team: 
-* Session 1: 09.06.2026, 11:00 – 12:30 CEST Kick-off & Meet the Harmony Team, (Harmony is a unique NLP-based tool to accelerate harmonisation processes.). Register via XXX
+* Session 1: 09.06.2026, 11:00 – 12:30 CEST Kick-off & Meet the Harmony Team, (Harmony is a unique NLP-based tool to accelerate harmonisation processes.).
 * Session 2: 29.09.2026, 11:00 – 12:30 CEST Evaluation of Test Equating & Linking Methods for Harmonisation. 
 * Register [here](https://infra4nextgen.com/i4ng-events/forthcoming-events/)
 2. Public Consultation Slots:  We offer three open Q&A sessions for questions and follow-ups.  Please send us an [email](mailto:harmonisation.i4ng@gesis.org) to receive the link.  
