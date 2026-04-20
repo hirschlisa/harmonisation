@@ -12,7 +12,7 @@ script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
 
 Welcome to the [Infra4NextGen](https://infra4nextgen.com/) course on Creating and Working with Ex-post Harmonised Survey Data!
 
-This course introduces you to ex-post data harmonisation in cross-national survey research, shows you how to apply harmonisation techniques in your own work, and how to use the NextGen Harmonised Data Gateway for your research purposes. 
+This course introduces you to ex-post data harmonisation in cross-national survey research, shows you how to apply harmonisation techniques in your own work, and how to use the [NextGen Harmonised Data Gateway](https://infra4nextgen.com/harmonisationgateway/) for your research purposes. 
 
 We will give you some insights on data harmonisation strategies, explain how to use harmonised cross-national survey data, give you some criteria for the evaluation of the harmonised data for your intended use, and make you familiar with hands-on tools. Our goal is for you to gain theoretical understanding, practical skills, and the ability to evaluate the quality of harmonised measures. 
 
