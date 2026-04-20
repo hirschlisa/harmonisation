@@ -162,7 +162,7 @@ Before applying any method, you must assess similarity. Not all variables can be
 
 Watch the video to learn more: 
 
-!?[⏯](video/video1-similarity.mp4)
+!?[⏯](video/Video1_Similarity_withcc.mp4)
 
 <!-- style="background-color: #E72E6B; color: white"--> 
 > **__Quiz I__**
@@ -203,7 +203,7 @@ Solution: When evaluating similarity for harmonisation purposes, you need to con
 
 If variables are sufficiently similar, different strategies can be applied to harmonise response scales. The choice of strategy depends on certain characteristics that are explained in the video below: 
 
-!?[⏯](video/video2-harmonisation-strategies.mp4)
+!?[⏯](video/Video2_HarmonisationStrategies_withcc.mp4)
 
 <!-- style="background-color: #E72E6B; color: white"--> 
 > **__Quiz III__**
