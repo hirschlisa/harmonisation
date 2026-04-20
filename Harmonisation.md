@@ -73,7 +73,7 @@ By the end of the course, you will be able to:
 This course comes with individual support in different formats. 
 
 1. Individual office hours: Two sessions, each with additional materials, input, and Q&A with the Infra4NextGen Harmonisation team: 
-* Session 1: 09.06.2026, 11:00 – 12:30 CEST Kick-off & Meet the Harmony Team, (Harmony is a unique NLP-based tool to accelerate harmonisation processes.).
+* Session 1: 09.06.2026, 11:00 – 12:30 CEST Kick-off & Meet the Harmony Team, (Harmony is a unique NLP-based tool to accelerate harmonisation processes.). [Register here →](https://cessda-eu.zoom.us/meeting/register/zT2oJJzIScaj0msbxLeR5A) 
 * Session 2: 29.09.2026, 11:00 – 12:30 CEST Evaluation of Test Equating & Linking Methods for Harmonisation. 
 * Register [here](https://infra4nextgen.com/i4ng-events/forthcoming-events/)
 2. Public Consultation Slots:  We offer three open Q&A sessions for questions and follow-ups.  Please send us an [email](mailto:harmonisation.i4ng@gesis.org) to receive the link.  
@@ -346,15 +346,15 @@ Before analysing harmonised variables, check the GESIS documentation to understa
 Variables are organised into two types: 
 
 * **Substantive variables**: These are the variables you are likely most interested in analysing because they carry substantial content. They always start with the pillar letter so you can distinguish them easily. 
-**Format**: Pillar _ Concept _ Label 
+**Format**: Pillar\_Concept\_Label 
 
- e_ = Equal, d_ = Digital, g_ = Green, h_ = Healthy, s_ = Strong. 
+ e\_ = Equal, d\_ = Digital, g\_ = Green, h\_ = Healthy, s\_ = Strong. 
 
 The second part indicates the concept (e.g., wr = Work & Redistribution) and the third part is a short label (e.g., govn = Government Responsibility).  
 
-For example, e_wr_govn reads: pillar **E**qual_ concept **wr** _label **govn**. 
+For example, e\_wr\_govn reads: pillar **E**qual\_ concept **wr** \_label **govn**. 
 
-* **Background and protocol variables** are everything else. Background variables describe the respondent and survey context (e.g., caseID_I4NG, country_I4NG, year, mode, w1_design).  Protocol variablesidentify the study (e.g., studyno_I4NG, survey, survey_year_title, doi_I4NG).  
+* **Background and protocol variables** are everything else. Background variables describe the respondent and survey context (e.g., caseID\_I4NG, country\_I4NG, year, mode, w1\_design).  Protocol variablesidentify the study (e.g., studyno\_I4NG, survey, survey\_year\_title, doi\_I4NG).  
 
 ## 3.2 Hands-On
 
@@ -369,7 +369,7 @@ If you want to run the code locally, you need two free software programs:  Insta
 
 You have two ways to interact with the exercises: 
 * Copy & Paste: You can click the Copy icon on the right-hand side of any code chunk in this course to paste it directly into your RStudio script. 
-* Download the Full Script: If you prefer to have the complete code for this entire section, you can [download the R Script here](Section3_WorkingwithHarmonisedDatasets.Rmd). 
+* Download the Full Script: If you prefer to have the complete code for this entire section, you can download the [R Script](Section3_WorkingwithHarmonisedDatasets.Rmd) and view the [rendered HTML](Section3_WorkingwithHarmonisedDatasets.html). 
 
 
 ** 3.2.1 Setup: Install and Load Packages **
@@ -395,8 +395,8 @@ What does each package do?
 * rgesis: connects to GESIS and downloads datasets directly from R 
 * haven: reads SPSS .sav files and preserves variable labels 
 * dplyr: provides filter(), count(), select(), summarise(), and more 
-* labelled: lets you inspect variable labels from SPSS files with var_label() 
-* tidyr : lets you reshape data 
+* labelled: lets you inspect variable labels from SPSS files with var\_label() 
+* tidyr: lets you reshape data 
 
 ** 3.2.2 Authenticate with GESIS  **  
 
@@ -451,8 +451,8 @@ dim(I4NG_equal_data)
 **What just happened? **
 
 When you run gesis_data(). 
-* gesis_data() connected to GESIS and downloaded the SPSS file for ZA9072 
-* read_sav() loaded it into R as a data frame, preserving all variable and value labels 
+* gesis\_data() connected to GESIS and downloaded the SPSS file for ZA9072 
+* read\_sav() loaded it into R as a data frame, preserving all variable and value labels 
 * dim() tells you: rows = respondents, columns = variables 
 
 **3.2.4 Explore the Variable Structure **
@@ -532,7 +532,7 @@ I4NG_equal_data %>%
 
 We will use e_wr_govn (Government Responsibility in Income Redistribution) as our example variable throughout this section. 
 
-Please open the (item`s page)[https://infra4nextgen.com/harmonisationgateway/documentation_equal.html#government-responsibility-in-income-redistribution---e_wr_govn] in another tab, where you can read the documentation for this variable, including  question text, response scales, harmonisation decisions, and more.   We highly suggest keeping the documentation open while working with the datasets. 
+Please open the [item`s page](https://infra4nextgen.com/harmonisationgateway/documentation_equal.html#government-responsibility-in-income-redistribution---e_wr_govn) in another tab, where you can read the documentation for this variable, including  question text, response scales, harmonisation decisions, and more.   We highly suggest keeping the documentation open while working with the datasets. 
 
 **Missing Value Codes **
 
@@ -574,7 +574,7 @@ I4NG_equal_data %>%
   arrange(e_wr_govn)  
 ```
 
-You can filter missing codes if you are merely interested in the content-related variables. Because we used user_na = TRUE, !is.na() handles all three of missing values (-9, -99, -999) at once.  
+You can filter missing codes if you are merely interested in the content-related variables. Because we used user\_na = TRUE, !is.na() handles all three of missing values (-9, -99, -999) at once.  
 
 **Which Source Surveys Cover This Variable? **
 
@@ -654,7 +654,7 @@ I4NG_equal_data %>%
 
 So far, we have been working with the Equal dataset and one variable. Now, examine what the Green dataset looks like, specifically how many surveys, countries, and years contribute to a given variable, and how that compares to using any single source survey on its own. 
 
-We use g_ep_clai (“Many claims about the environment are exaggerated”) for our example. 
+We use g\_ep\_clai (“Many claims about the environment are exaggerated”) for our example. 
 
 ```r
 # Download the Green dataset 
@@ -706,7 +706,7 @@ What happens when you want to analyse two variables from different policy pillar
 
 Explore a Variable from the Green Dataset 
 
-Before merging, let us explore g_ep_clai the same way we did for e_wr_govn. 
+Before merging, let us explore g\_ep\_clai the same way we did for e\_wr\_govn. 
 ```r
 # Overall frequencies for g_ep_clai   
 I4NG_green_data %>%  
@@ -727,7 +727,7 @@ I4NG_green_data %>%
 ```
 **Who Answered Both Items g_ep_clai and e_wr_govn? **
 
-The code below identifies respondents who provided valid responses to both items. It selects the ID and variable from each dataset, joins them on the shared caseID_I4NG identifier, and drops anyone with a missing value for either item. 
+The code below identifies respondents who provided valid responses to *both* items. It selects the ID and variable from each dataset, joins them on the shared caseID\_I4NG identifier, and drops anyone with a missing value for either item. 
 
 ```r
  #  Find caseIDs with valid responses to BOTH variables 
@@ -763,11 +763,11 @@ I4NG_equal_data %>%
 
 This is the core trade-off: **individual-level** analysis is possible but comes at the cost of a much smaller sample, limited to surveys that include both items.  
 
-Now, let us put it all together. You have explored individual variables and understood the trade-offs in coverage. Here is how to merge data from different pillars using the caseID_I4NG identifier. You can **reliably** merge these datasets because the caseID_I4NG   identifier ensures that you are matching the same individuals across different datasets. 
+Now, let us put it all together. You have explored individual variables and understood the trade-offs in coverage. Here is how to merge data from different pillars using the caseID\_I4NG identifier. You can **reliably** merge these datasets because the caseID\_I4NG identifier ensures that you are matching the same individuals across different datasets. 
 
 ** 3.2.9 Merge two datasets: Append a Variable from the Green into the Equal Dataset **
 
-Once you have decided on your analysis, you can merge the g_ep_clai  variable  from the Green dataset into the Equal dataset using caseID_I4NG. All Equal rows are retained; matching respondents get the g_ep_clai  value, others get NA. 
+Once you have decided on your analysis, you can merge the g\_ep\_clai  variable  from the Green dataset into the Equal dataset using caseID\_I4NG. All Equal rows are retained; matching respondents get the g\_ep\_clai  value, others get NA. 
 
 ```r
 # Append g_ep_clai from Green into the Equal dataset 
@@ -793,7 +793,7 @@ I4NG_equal_data %>%
 
 Try the following on your own. Use the **Strong**  (ZA9071) and the **Digital** datasets (ZA9073). 
 
-1. Download both datasets using gesis_data() 
+1. Download both datasets using gesis\_data() 
 2. Identify substantive harmonised variables. 
 3. Pick one variable from each dataset. Consult the documentation before starting the analysis. Check: overall frequency, source survey coverage, country coverage, year coverage. 
 4. Find how many respondents answered both of your chosen variables. 
@@ -882,7 +882,7 @@ It is difficult enough to ensure the comparability of international survey data 
 Assessing quality can be categorised into three primary aspects that come into consideration at different stages of the harmonisation process: Process Quality, Documentation Quality, and Output Quality. 
 
 A. Assessing Process Quality: Comparability, Reliability and Completeness 
-* **Comparability**: The central issue for survey data harmonisation is the comparability of question texts and response categories. The measurement of comparability should be standardised, for example, by using an AI-based software tool that provides standardised comparability indicators, such as HARMONY (see [Section 5](#XX)). 
+* **Comparability**: The central issue for survey data harmonisation is the comparability of question texts and response categories. The measurement of comparability should be standardised, for example, by using an AI-based software tool that provides standardised comparability indicators, such as **HARMONY** (see [Section 5](#20)). 
 * **Reliability in terms of Data Consistency**: Checking consistency means controlling the source data for systematic derivations (e.g. missing categories or deviant distributions due to accidentally revised response scales). 
 * **Completeness**: Beyond looking at the descriptive statistics for consistency, the data needs to be controlled for completeness. This means it needs to be checked whether all included samples are based on the same universe of the representative sample, which is not the case when, for some samples (maybe in one of three surveys), some respondents were filtered out. Example: All respondents were asked whether they attend religious services, vs only those who report that they are 1) Christians and 2) they believe in God were asked. 
 
@@ -973,7 +973,7 @@ Bechert, I., Beck, K., & Solanes Ros, I. (2025). Caring for Data’s Soul: The d
  
 Biolcati, F., Molteni, F., Quandt, M. & Vezzoni, C. (2020). Church Attendance and Religious change Pooled European dataset (CARPE): a survey harmonization project for the comparative analysis of long-term trends in individual religiosity. Quality & Quantity, Volume 56, pp. 1729-1753. https://doi.org/10.1007/s11135-020-01048-9 
 
-Kołczyńska, M. & Schoene, M. (2018). Survey Data Harmonisation and the Quality of Data Documentation in Cross-national Surveys. Advances in Comparative Survey Methods. 
+Kołczyńska, M. & Schoene, M. (2018). Survey Data Harmonisation and the Quality of Data Documentation in Cross-national Surveys. Advances in Comparative Survey Methods. https://doi.org/10.1002/9781118884997.ch44 
 
 Kołczyńska, M. & Slomczynski, K. M. (2018). Item Metadata as Controls for Ex Post Harmonisation of International Survey Projects. In Johnson, T. P., Penell, B.-E., Stoop, I. A. L. & Dorer, B. (Eds.). Advances in Comparative Survey Methods: Multinational, Multiregional, and Multicultural Contexts (3MC). Chapter 46. John Wiley & Sons, Inc. https://doi.org/10.1002/9781118884997.ch46 
 
@@ -1028,13 +1028,13 @@ Go to the [Harmonisation Toolbox](https://infra4nextgen.com/harmonisationgateway
 
 **Step 2: Explore the Structure **
 
-As you look at the “Climate Change Worries” guideline, notice how the workflow is modular: 1. **The Setup**: You define your directory and load libraries. **The Codebook**: You tell R which variables to “pull” from your raw data. 3. **The Crosswalk Table (CWT)**: This is the heart of the tool. Even if you decide on a different survey item, you use the function for this table to map your source values to your target scale. 4. **The Transformation**: The script uses the Linear Stretch formula. This formula works for any numeric scale, whether it’s 1–4, 1–7, or 0–10. 
+As you look at the [“Climate Change Worries” guideline](https://infra4nextgen.com/harmonisationgateway/g_cc_worr.html), notice how the workflow is modular: 1. **The Setup**: You define your directory and load libraries. **The Codebook**: You tell R which variables to “pull” from your raw data. 3. **The Crosswalk Table (CWT)**: This is the heart of the tool. Even if you decide on a different survey item, you use the function for this table to map your source values to your target scale. 4. **The Transformation**: The script uses the Linear Stretch formula. This formula works for any numeric scale, whether it’s 1–4, 1–7, or 0–10. 
 
 ![CWT](image/CWT.png)
 
 **Step 3: Try it Yourself **
 
-Find the create_cwt() function. This is where you would replace wrclmch with your own variable name. Take a few minutes to review the entire script and imagine how you would adapt it for your own variable. When you are ready, copy the script to your own syntax file and use it as your starting point. 
+Find the create\_cwt() function. This is where you would replace wrclmch with your own variable name. Take a few minutes to review the entire script and imagine how you would adapt it for your own variable. When you are ready, copy the script to your own syntax file and use it as your starting point. 
 
 
 <!-- style="background-color: #E72E6B; color: white"--> 
@@ -1077,11 +1077,13 @@ To find your next harmonisation candidates, follow these steps:
 
 **5.3.3 Going Further: The R and Python Packages **
 
-The web tool is a great starting point, but if you want more control, Harmony also comes in dedicated packages for both R and Python that you can check out on this GitHub page. These are better suited for researchers who want to work faster, customise the matching process, and integrate Harmony directly into their own analysis workflows without switching between tools. The R package, in particular, is available on CRAN and offers a more flexible and scriptable alternative to the browser interface. You can find the full documentation here: Harmony R package on CRAN. 
+The web tool is a great starting point, but if you want more control, Harmony also comes in dedicated packages for both R and Python that you can check out on [this GitHub page](https://github.com/harmonydata/harmony). These are better suited for researchers who want to work faster, customise the matching process, and integrate Harmony directly into their own analysis workflows without switching between tools. The R package, in particular, is available on CRAN and offers a more flexible and scriptable alternative to the browser interface. You can find the full documentation here: [Harmony R package on CRAN](https://cran.r-project.org/web/packages/harmonydata/harmonydata.pdf). 
 
-Do you want to ask the Harmony team directly? They will be joining us for a live office hours session on 9 June 2026, 11:00–12:30 CEST. Bring your own data and questions. [Register here →] 
+If you want to understand more about how NLP-based matching is used for harmonisation, we recommend reading: 
 
- 
+McElroy, E., Wood, T.A., Bond, R., Mulvenna M., Shevlin M., Ploubidis G., Scopel Hoffmann M., Moltrecht B. (2024). Using natural language processing to facilitate the harmonisation of mental health questionnaires: a validation study using real-world data. BMC Psychiatry, 24, 530. https://doi.org/10.1186/s12888-024-05954-2 
+
+Do you want to ask the Harmony team directly? They will be joining us for a live office hours session on **9 June 2026, 11:00–12:30 CEST**. Bring your own data and questions. [Register here →](https://cessda-eu.zoom.us/meeting/register/zT2oJJzIScaj0msbxLeR5A) 
 
 **5.3.4 Knowledge Check: Navigating the Tool **
 
@@ -1102,18 +1104,18 @@ Do you want to ask the Harmony team directly? They will be joining us for a live
 Solution: A negative score indicates that the tool detected a negation. These items are conceptually very similar but point in opposite directions—making them excellent candidates for “reverse coding” during the harmonisation phase.  
 ***
  
-
-Summary: Your Harmonisation Workflow 
-
-You now have a complete workflow for building your own research infrastructure: 
-* **Discover**: Use the **Harmony Tool** or **Variable Database** to find candidates. 
-* **Strategise**: Decide on a harmonisation strategy (e.g., **Linear Stretch** for different scales) based on what you have learnt in previous sections. 
-* **Execute**: Adapt and reuse the **Harmonisation Toolbox** R-scripts to clean and merge your data. 
-* **Verify**: Apply **Quality Checks** (Information loss vs Aggregation error) to ensure your data is reliable. 
-
-**Which approach meets your needs for your actual research project? **
-
-Depending on your goals, you might want a “ready-to-eat” dataset, or you might need to build a brand-new “recipe” from scratch. Choose the pathway that fits your project. 
+<!-- style="background-color: #6EC7D9;"--> 
+> Summary: Your Harmonisation Workflow 
+>
+>You now have a complete workflow for building your own research infrastructure: 
+>* **Discover**: Use the **Harmony Tool** or **Variable Database** to find candidates. 
+>* **Strategise**: Decide on a harmonisation strategy (e.g., **Linear Stretch** for different scales) based on what you have learnt in previous sections. 
+>* **Execute**: Adapt and reuse the **Harmonisation Toolbox** R-scripts to clean and merge your data. 
+>* **Verify**: Apply **Quality Checks** (Information loss vs Aggregation error) to ensure your data is reliable. 
+>
+>**Which approach meets your needs for your actual research project? **
+>
+>Depending on your goals, you might want a “ready-to-eat” dataset, or you might need to build a brand-new “recipe” from scratch. Choose the pathway that fits your project. 
 
 # Summary 
 
@@ -1121,7 +1123,7 @@ Congratulations! You completed the course “Creating and Working with Ex-post H
 
 In this course, you learned about the NextGen Harmonised Data Gateway and its three components: the Variable Database, Harmonisation Toolbox, and Harmonised Datasets. You explored different harmonisation strategies and their consequences, assessed the quality of harmonised measures, and gained hands-on experience working with harmonised survey data in R. You now know how to identify variables as candidates for harmonisation, apply appropriate harmonisation strategies, and create your own harmonised datasets. 
 
-We are continually updating the course and incorporating feedback, so please do not hesitate to contact us via email or during our office hours. If you are interested in live events hosted by the Infra4NextGen project, please visit the [I4NG events site](https://infra4nextgen.com/i4ng-events/forthcoming-events/) and come join us at one of our events - we host webinars, workshops, and data[](https://liascript.github.io/LiveEditor/liascript/index.html?#33)thons regularly! 
+We are continually updating the course and incorporating feedback, so please do not hesitate to contact us via email or during our office hours. If you are interested in live events hosted by the Infra4NextGen project, please visit the [I4NG events site](https://infra4nextgen.com/i4ng-events/forthcoming-events/) and come join us at one of our events - we host webinars, workshops, and datathons regularly! 
 
 ---
 ![Infra4NextGen Logo](image/Infra4NextGen_logo_resized.jpg  "https://infra4nextgen.com/") ![CESSDA Logo](image/cessda_logo.png  "https://www.cessda.eu/") 
