@@ -121,7 +121,7 @@ For each concept that was measured in at least two different survey programmes, 
 
 Watch the video below to learn more about the Variable Database and how to use it for your research. 
 
-!?[⏯](https://youtu.be/4dCNBA2q5-Y "NextGen Harmonised Data Gateway | Step 1 – Variable Database") 
+??[Variable Database](https://youtu.be/4dCNBA2q5-Y "NextGen Harmonised Data Gateway | Step 1 – Variable Database")
 
 ## 1.2 The Harmonisation Toolbox 
 
@@ -133,7 +133,7 @@ The Harmonisation Toolbox offers examples of how to harmonise specific items. Th
 
 The examples are designed so that no prior knowledge of the statistical programming language is required. You can use them to learn more about the harmonisation process or for your own harmonisation projects. Watch the video below to learn more about the Harmonisation Toolbox:
 
-!?[⏯](https://youtu.be/A67UubL0Qxg "NextGen Harmonised Data Gateway | Step 2 – Harmonisation Toolbox") 
+??[Harmonisation Toolbox](https://youtu.be/A67UubL0Qxg "NextGen Harmonised Data Gateway | Step 2 – Harmonisation Toolbox") 
 
 
 ## 1.3 The Harmonised Datasets 
@@ -142,7 +142,7 @@ The harmonised datasets are organized by the EU youth policy pillars. In total, 
 
 You can also access explicit documentation for each harmonisation process that was conducted as HTML documents directly from the data page here. In the following video, we explain how you can access, navigate, and analyse these datasets to support your research. 
 
-!?[⏯](https://youtu.be/9ujaAx9cQkw "NextGen Harmonised Data Gateway | Step 3 – Working with harmonised datasets") 
+??[Working with harmonised datasets](https://youtu.be/9ujaAx9cQkw "NextGen Harmonised Data Gateway | Step 3 – Working with harmonised datasets") 
 
 
 <!-- style="background-color: #6EC7D9;"--> 
