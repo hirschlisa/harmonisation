@@ -133,7 +133,8 @@ The Harmonisation Toolbox offers examples of how to harmonise specific items. Th
 
 The examples are designed so that no prior knowledge of the statistical programming language is required. You can use them to learn more about the harmonisation process or for your own harmonisation projects. Watch the video below to learn more about the Harmonisation Toolbox:
 
-Video: [insert Video here] 
+!?["NextGen Harmonised Data Gateway | Step 2 – Harmonisation Toolbox"](https://youtu.be/A67UubL0Qxg) 
+
 
 ## 1.3 The Harmonised Datasets 
 
@@ -141,7 +142,8 @@ The harmonised datasets are organized by the EU youth policy pillars. In total, 
 
 You can also access explicit documentation for each harmonisation process that was conducted as HTML documents directly from the data page here. In the following video, we explain how you can access, navigate, and analyse these datasets to support your research. 
 
-Video: [insert video here] 
+!?["NextGen Harmonised Data Gateway | Step 3 – Working with harmonised datasets"](https://youtu.be/9ujaAx9cQkw) 
+
 
 <!-- style="background-color: #6EC7D9;"--> 
 > In this section you learned about the three tracks of the Harmonised Data Gateway. You probably have an idea about how to use them in your next research process. 
