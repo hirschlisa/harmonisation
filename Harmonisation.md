@@ -121,7 +121,7 @@ For each concept that was measured in at least two different survey programmes, 
 
 Watch the video below to learn more about the Variable Database and how to use it for your research. 
 
-Video: [insert Video here] 
+!?["NextGen Harmonised Data Gateway | Step 1 – Variable Database"](https://youtu.be/4dCNBA2q5-Y) 
 
 ## 1.2 The Harmonisation Toolbox 
 
